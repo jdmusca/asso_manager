@@ -1,0 +1,25 @@
+<aside class="app-sidebar bg-light border-end">
+  <div class="p-3">
+    <h5 class="mb-3">Asso Manager</h5>
+    <nav aria-label="Main navigation">
+      <ul class="nav flex-column">
+        <li class="nav-item"><%= link_to 'Accueil', root_path, class: "nav-link #{'active' if current_page?(root_path)}" %></li>
+        <li class="nav-item"><%= link_to 'Associations', associations_path, class: "nav-link #{'active' if current_page?(associations_path)}" %></li>
+        <li class="nav-item"><%= link_to 'Cotisations', cotisations_path, class: "nav-link #{'active' if current_page?(cotisations_path)}" %></li>
+        <li class="nav-item"><%= link_to 'Participations', participations_path, class: "nav-link #{'active' if current_page?(participations_path)}" %></li>
+        <li class="nav-item"><%= link_to 'Membres', members_path, class: "nav-link #{'active' if current_page?(members_path)}" %></li>
+
+        <% if utilisateur_signed_in? %>
+          <li class="nav-item mt-3"><%= link_to "Mon profil", '#', class: "nav-link" %></li>
+          <% if current_utilisateur.role == 'admin' %>
+            <li class="nav-item"><%= link_to 'Administration', '#', class: "nav-link text-danger" %></li>
+          <% end %>
+          <li class="nav-item"><%= link_to 'Se déconnecter', logout_path, method: :delete, data: { confirm: 'Déconnexion ?' }, class: "nav-link" %></li>
+        <% else %>
+          <li class="nav-item mt-3"><%= link_to 'Se connecter', login_path, class: "nav-link" %></li>
+        <% end %>
+
+      </ul>
+    </nav>
+  </div>
+</aside>

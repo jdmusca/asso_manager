@@ -1,0 +1,14 @@
+/* Sidebar styles */
+.app-sidebar {
+  width: 240px;
+  min-height: 100vh;
+}
+
+.app-wrapper .active {
+  font-weight: 600;
+}
+
+/* Make sidebar collapse on small screens */
+@media (max-width: 767px) {
+  .app-sidebar { display: none; }
+}
