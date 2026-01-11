@@ -1,0 +1,10 @@
+<h1>Cotisations</h1>
+<% if @cotisations.any? %>
+  <ul>
+    <% @cotisations.each do |c| %>
+      <li><%= c.respond_to?(:name) ? c.name : c.to_s %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Aucune cotisation pour le moment.</p>
+<% end %>

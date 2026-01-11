@@ -1,0 +1,10 @@
+<h1>Associations</h1>
+<% if @associations.any? %>
+  <ul>
+    <% @associations.each do |a| %>
+      <li><%= a.respond_to?(:name) ? a.name : a.to_s %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Aucune association pour le moment.</p>
+<% end %>

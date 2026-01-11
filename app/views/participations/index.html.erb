@@ -1,0 +1,10 @@
+<h1>Participations</h1>
+<% if @participations.any? %>
+  <ul>
+    <% @participations.each do |p| %>
+      <li><%= p.respond_to?(:name) ? p.name : p.to_s %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Aucune participation pour le moment.</p>
+<% end %>
