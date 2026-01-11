@@ -1,14 +1,57 @@
-/* Sidebar styles */
+/* Professional sidebar styles */
 .app-sidebar {
-  width: 240px;
+  width: 260px;
   min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+  border-right: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  position: sticky;
+  top: 0;
+  padding-top: 1rem;
+  transition: transform 240ms ease, width 240ms ease, opacity 240ms ease;
+  z-index: 50;
 }
 
-.app-wrapper .active {
+.app-sidebar .p-3 { padding: 1rem 1.25rem; }
+
+.app-sidebar .nav-link {
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .75rem;
+  border-radius: 6px;
+}
+
+.app-sidebar .nav-link:hover, .app-sidebar .nav-link:focus {
+  background: rgba(0,0,0,0.03);
+  text-decoration: none;
+}
+
+.app-sidebar .nav-link.active {
+  background: linear-gradient(90deg,#e9f1ff,#ffffff);
+  color: #0b5cff;
   font-weight: 600;
 }
 
-/* Make sidebar collapse on small screens */
-@media (max-width: 767px) {
-  .app-sidebar { display: none; }
+.app-sidebar .nav-icon { display:inline-flex; width:18px; height:18px; align-items:center; justify-content:center; }
+
+/* collapsed state */
+.app-sidebar.collapsed {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
+
+/* make sidebar hidden by default on small screens but togglable */
+@media (max-width: 767px) {
+  .app-sidebar { transform: translateX(-100%); opacity: 0; pointer-events: none; position: fixed; left: 0; top: 0; height: 100vh; }
+  .app-sidebar.visible { transform: translateX(0); opacity: 1; pointer-events: auto; }
+  .sidebar-toggle { display: inline-flex; }
+}
+
+/* ensure toggler hidden on larger screens */
+.sidebar-toggle { display: none; }
+
+/* visually hidden helper */
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

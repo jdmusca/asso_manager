@@ -1,18 +1,50 @@
 <aside class="app-sidebar bg-light border-end">
   <div class="p-3">
     <h5 class="mb-3">Asso Manager</h5>
-    <nav aria-label="Main navigation">
+    <nav id="main-navigation" aria-label="Main navigation">
       <ul class="nav flex-column">
-        <li class="nav-item"><%= link_to 'Accueil', root_path, class: "nav-link #{'active' if current_page?(root_path)}" %></li>
-        <li class="nav-item"><%= link_to 'Associations', associations_path, class: "nav-link #{'active' if current_page?(associations_path)}" %></li>
-        <li class="nav-item"><%= link_to 'Cotisations', cotisations_path, class: "nav-link #{'active' if current_page?(cotisations_path)}" %></li>
-        <li class="nav-item"><%= link_to 'Participations', participations_path, class: "nav-link #{'active' if current_page?(participations_path)}" %></li>
-        <li class="nav-item"><%= link_to 'Membres', members_path, class: "nav-link #{'active' if current_page?(members_path)}" %></li>
+        <li class="nav-item">
+          <%= link_to root_path, class: "nav-link #{'active' if current_page?(root_path)}" do %>
+            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+            Accueil
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to associations_path, class: "nav-link #{'active' if current_page?(associations_path)}" do %>
+            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2l4 4-4 4-4-4 4-4zM4 20v-8h16v8H4z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+            Associations
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to cotisations_path, class: "nav-link #{'active' if current_page?(cotisations_path)}" do %>
+            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M5 6h14" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+            Cotisations
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to participations_path, class: "nav-link #{'active' if current_page?(participations_path)}" do %>
+            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM6 20a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+            Participations
+          <% end %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to members_path, class: "nav-link #{'active' if current_page?(members_path)}" do %>
+            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM6 20a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+            Membres
+          <% end %>
+        </li>
 
         <% if utilisateur_signed_in? %>
           <li class="nav-item mt-3"><%= link_to "Mon profil", '#', class: "nav-link" %></li>
           <% if current_utilisateur.role == 'admin' %>
-            <li class="nav-item"><%= link_to 'Administration', '#', class: "nav-link text-danger" %></li>
+            <li class="nav-item"><%= link_to 'Administration', '#', class: "nav-link text-danger" do %>
+              <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+              Administration
+            <% end %></li>
           <% end %>
           <li class="nav-item"><%= link_to 'Se déconnecter', logout_path, method: :delete, data: { confirm: 'Déconnexion ?' }, class: "nav-link" %></li>
         <% else %>

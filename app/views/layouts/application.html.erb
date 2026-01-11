@@ -28,6 +28,14 @@
     <a class="sr-only sr-only-focusable" href="#main-content">Aller au contenu</a>
 
     <div class="app-wrapper d-flex">
+      <button class="sidebar-toggle btn btn-outline-secondary d-md-none m-2" aria-expanded="true" aria-controls="main-navigation" title="Ouvrir le menu">
+        <span class="visually-hidden">Basculer le menu</span>
+        <!-- Simple hamburger icon -->
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
       <%= render 'shared/sidebar' %>
 
       <main id="main-content" class="flex-fill p-4">
@@ -36,5 +44,48 @@
     </div>
 
     <%= javascript_include_tag 'application' %>
+
+    <script>
+      (function(){
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('.app-sidebar');
+        if(!toggle || !sidebar) return;
+
+        var isSmall = function(){ return window.matchMedia('(max-width: 767px)').matches; };
+
+        // initialise from localStorage
+        var collapsed = localStorage.getItem('sidebar_collapsed') === 'true';
+        if(collapsed && !isSmall()) {
+          sidebar.classList.add('collapsed');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // For small screens, use .visible to show/hide
+        toggle.addEventListener('click', function(){
+          if(isSmall()) {
+            var visible = sidebar.classList.toggle('visible');
+            toggle.setAttribute('aria-expanded', String(visible));
+            // don't persist small-screen visibility
+          } else {
+            var isCollapsed = sidebar.classList.toggle('collapsed');
+            toggle.setAttribute('aria-expanded', String(!isCollapsed));
+            localStorage.setItem('sidebar_collapsed', String(isCollapsed));
+          }
+        });
+
+        // keyboard accessible: allow Enter/Space
+        toggle.addEventListener('keydown', function(e){
+          if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle.click(); }
+        });
+
+        // close sidebar when clicking outside on small screens
+        document.addEventListener('click', function(e){
+          if(!isSmall()) return;
+          if(!sidebar.classList.contains('visible')) return;
+          var inside = sidebar.contains(e.target) || toggle.contains(e.target);
+          if(!inside) sidebar.classList.remove('visible');
+        });
+      })();
+    </script>
   </body>
 </html>
