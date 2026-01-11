@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   post "login"  => "sessions#create"
   delete "logout" => "sessions#destroy", as: :logout
 
+  # Sign up / registration
+  get "signup" => "utilisateurs#new", as: :signup
+  post "signup" => "utilisateurs#create"
+
   # Basic resources (placeholders)
   resources :associations, only: %i[index show new create edit update destroy]
   resources :cotisations, only: %i[index show]
