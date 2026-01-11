@@ -1,0 +1,19 @@
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.9/ext/stringio
+/home/sophiane/.local/share/mise/installs/ruby/3.4.7/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.9/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-ustavw sitelibdir\=./.gem.20251221-113824-ustavw clean
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.9/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-ustavw sitelibdir\=./.gem.20251221-113824-ustavw
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.9/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-ustavw sitelibdir\=./.gem.20251221-113824-ustavw install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20251221-113824-ustavw
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/stringio-3.1.9/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-ustavw sitelibdir\=./.gem.20251221-113824-ustavw clean

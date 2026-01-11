@@ -1,0 +1,19 @@
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.2.0/gems/debug-1.11.0/ext/debug
+/usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.2.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251221-111158-51jwnf sitelibdir\=./.gem.20251221-111158-51jwnf clean
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.2.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251221-111158-51jwnf sitelibdir\=./.gem.20251221-111158-51jwnf
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.2.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251221-111158-51jwnf sitelibdir\=./.gem.20251221-111158-51jwnf install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20251221-111158-51jwnf/debug
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.2.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251221-111158-51jwnf sitelibdir\=./.gem.20251221-111158-51jwnf clean

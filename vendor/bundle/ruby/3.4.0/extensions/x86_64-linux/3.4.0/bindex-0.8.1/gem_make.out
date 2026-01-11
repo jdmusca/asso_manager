@@ -1,0 +1,18 @@
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+/home/sophiane/.local/share/mise/installs/ruby/3.4.7/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-a9g40b sitelibdir\=./.gem.20251221-113824-a9g40b clean
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-a9g40b sitelibdir\=./.gem.20251221-113824-a9g40b
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-a9g40b sitelibdir\=./.gem.20251221-113824-a9g40b install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20251221-113824-a9g40b/skiptrace/internal
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-a9g40b sitelibdir\=./.gem.20251221-113824-a9g40b clean

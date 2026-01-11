@@ -1,0 +1,29 @@
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/psych-5.3.0/ext/psych
+/home/sophiane/.local/share/mise/installs/ruby/3.4.7/bin/ruby extconf.rb
+checking for pkg-config for yaml-0.1... [" ", "", "-lyaml"]
+creating Makefile
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/psych-5.3.0/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-s27in2 sitelibdir\=./.gem.20251221-113824-s27in2 clean
+cd libyaml && make clean
+/bin/sh: 1: cd: can't cd to libyaml
+make: [Makefile:287 : clean-so] Erreur 2 (ignorée)
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/psych-5.3.0/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-s27in2 sitelibdir\=./.gem.20251221-113824-s27in2
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.so
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/psych-5.3.0/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-s27in2 sitelibdir\=./.gem.20251221-113824-s27in2 install
+/usr/bin/install -c -m 0755 psych.so ./.gem.20251221-113824-s27in2
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/psych-5.3.0/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-s27in2 sitelibdir\=./.gem.20251221-113824-s27in2 clean
+cd libyaml && make clean
+/bin/sh: 1: cd: can't cd to libyaml
+make: [Makefile:287 : clean-so] Erreur 2 (ignorée)

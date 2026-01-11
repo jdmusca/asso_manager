@@ -1,0 +1,19 @@
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+/home/sophiane/.local/share/mise/installs/ruby/3.4.7/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-f14fnr sitelibdir\=./.gem.20251221-113824-f14fnr clean
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-f14fnr sitelibdir\=./.gem.20251221-113824-f14fnr
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-f14fnr sitelibdir\=./.gem.20251221-113824-f14fnr install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20251221-113824-f14fnr/debug
+
+current directory: /home/sophiane/asso_manager/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251221-113824-f14fnr sitelibdir\=./.gem.20251221-113824-f14fnr clean

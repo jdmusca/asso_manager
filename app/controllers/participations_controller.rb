@@ -3,9 +3,9 @@ class ParticipationsController < ApplicationController
     begin
       @participations = if defined?(Participation)
                           Participation.all.to_a
-                        else
+      else
                           []
-                        end
+      end
     rescue StandardError => e
       Rails.logger.debug("Participations#index fallback empty due to: #{e.class} - #{e.message}")
       @participations = []

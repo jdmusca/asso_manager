@@ -1,0 +1,15 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: 5
+  username: asso_user
+  password: 12345
+  host: localhost
+
+development:
+  <<: *default
+  database: asso_manager_development
+
+test:
+  <<: *default
+  database: asso_manager_test
